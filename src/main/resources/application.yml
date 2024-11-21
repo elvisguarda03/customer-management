@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:ECOMMERCE_CUSTOMER;INIT=RUNSCRIPT FROM 'classpath:sql/Create_Tables.sql'\;RUNSCRIPT FROM 'classpath:sql/Insert_Tables.sql'
+    username: sa
+    password: root
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  web:
+    resources:
+      add-mappings: false
+logging:
+  level:
+    feign: DEBUG
+    org:
+      springframework:
+        web: DEBUG
+        http: DEBUG
+
+app:
+  crm-customer:
+    url: http://localhost:8080
