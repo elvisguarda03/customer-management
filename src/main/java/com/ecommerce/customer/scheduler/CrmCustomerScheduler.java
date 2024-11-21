@@ -1,14 +1,12 @@
 package com.ecommerce.customer.scheduler;
 
 import com.ecommerce.customer.client.CRMCustomerClient;
-import com.ecommerce.customer.client.request.CrmCustomerRequest;
 import com.ecommerce.customer.entities.Customer;
 import com.ecommerce.customer.entities.FailedRequest;
 import com.ecommerce.customer.enums.EventType;
 import com.ecommerce.customer.mapper.CustomerMapper;
 import com.ecommerce.customer.repository.CustomerRepository;
 import com.ecommerce.customer.repository.FailedRequestRepository;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
